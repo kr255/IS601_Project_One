@@ -11,7 +11,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_addition(self):
         calc = Calculator()
-        self.assertisEqual(calc.addtion(2+2), 4)
+        self.assertisEqual(calc.addtion(2+2), )
 
 if __name__ == '__main__':
     unittest.main()
