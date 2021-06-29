@@ -2,4 +2,4 @@ FROM python:latest
 
 ADD src /src
 
-CMD [ "python", "./src/CalculatorTest.py" ]
+CMD [ "python", "./src/CSVTest.py" ]

@@ -1,10 +1,12 @@
 import unittest
+from ReaderOfCSVs import ReaderOfCSVs
 
 
 class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.csvReader = ReaderOfCSVs('Unit Test Addition')
+        path = r'src/UnitTestAddition.csv'
+        self.csvReader = ReaderOfCSVs(path)
 
     def test_something(self):
         self.assertEqual(True, True)

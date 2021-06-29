@@ -19,3 +19,5 @@ class ReaderOfCSVs:
             for row in csvrow:
                 self._data.append(row)
 
+
+
