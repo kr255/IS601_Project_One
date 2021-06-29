@@ -11,11 +11,11 @@ class MyTestCase(unittest.TestCase):
 
     def test_addition(self):
         calc = Calculator()
-        self.assertisEqual(calc.add(2+2), 4)
+        self.assertEqual(calc.add(2,2), 4)
 
     def test_subtraction(self):
         calc = Calculator()
-        self.assertisEqual(calc.sub(2-2), 0)
+        self.assertEqual(calc.sub(2,2), 0)
 
 if __name__ == '__main__':
     unittest.main()
