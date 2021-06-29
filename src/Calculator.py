@@ -1,7 +1,7 @@
 from BasicArithmitic import *
 class Calculator:
     def __init__(self):
-
+        self._result = 0
         pass
 
     def add(self, a, b):
