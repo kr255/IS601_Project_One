@@ -14,3 +14,5 @@ class Calculator:
         return multiply(a, b)
     def square(self, a):
         return square(a)
+    def squRoot(self, a):
+        return squareRoot(a)
