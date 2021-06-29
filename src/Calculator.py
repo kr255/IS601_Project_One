@@ -12,3 +12,5 @@ class Calculator:
         return divide(a, b)
     def mul(self, a, b):
         return multiply(a, b)
+    def square(self, a):
+        return square(a)
