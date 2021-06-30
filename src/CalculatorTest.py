@@ -8,9 +8,13 @@ from BasicArithmitic import *
 setting up logger for checking out of obj
 redirecting it to standard out??
     
-result:::: well should of read documentation
+result:::: well should of read the documentation
 setUp() is called per test method call so 1 obj is created per test.
-    
+
+get the logger
+set it to debug level 
+set steam to standard out
+add handler to logger    
 '''
 
 logger = logging.getLogger()
@@ -20,6 +24,8 @@ logger.addHandler(stream_handler)
 
 '''
 Test class for Calculator.py
+
+camelcase is out of habit, please ignore it. 
 '''
 
 class MyTestCase(unittest.TestCase):

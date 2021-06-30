@@ -2,22 +2,25 @@ import csv
 
 
 class ReaderOfCSVs:
-    #empty list to store dic val from the csv
 
-    '''constructor
-    Creates a new instance of ReaderOfCSVs
-    open a file path specified as text for reading
+    '''
+    Constructor
+    @:param filepath, empty list
+    open a file path specified for reading a csv
     DictReader from csv reads and reads it as a dictionary per line
     for example: {Value1: 580, Value2: 459, Value3: 1039}
     until EOF
-    Each row in the csvRow is then added to _data[] list
+    Each row in the csvRow is then added to a list
     '''
-    def __init__(self, filepapa):
-        self._data = []
+    def __init__(self, filepapa, listForData=[]):
+        self._data = listForData
         with open(filepapa) as textToRead:
-            csvrow = csv.DictReader(textToRead)
+            csvrow = csv.DictReader(textToRead, delimiter=",")
             for row in csvrow:
                 self._data.append(row)
 
 
-
+    '''
+    @:param classname
+    '''
+    def return_data_objects(self, classname):
