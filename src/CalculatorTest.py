@@ -1,9 +1,30 @@
 import unittest
+import logging
+import sys
 from Calculator import Calculator
 from BasicArithmitic import *
 
+'''
+setting up logger for checking out of obj
+redirecting it to standard out??
+    
+result:::: well should of read documentation
+setUp() is called per test method call so 1 obj is created per test.
+    
+'''
+
+logger = logging.getLogger()
+logger.level = logging.DEBUG
+stream_handler = logging.StreamHandler(sys.stdout)
+logger.addHandler(stream_handler)
+
+'''
+Test class for Calculator.py
+'''
+
 class MyTestCase(unittest.TestCase):
     def setUp(self):
+        stream_handler.stream = sys.stdout
         self.calc = Calculator()
 
     def test_something(self):
