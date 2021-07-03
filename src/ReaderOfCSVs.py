@@ -23,7 +23,7 @@ This class only reads a file in CSV
 should technically read A file regardless of filetype but mehh
 '''
 class ReaderOfCSVs:
-    data = []
+    data = [] #this var ruined it all for me
     '''
     Constructor
     @:param filepath, empty list

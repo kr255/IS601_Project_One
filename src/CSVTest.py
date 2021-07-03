@@ -37,9 +37,9 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(addition, list)
         test_class_addition = classfactory('addition', self.csvReaderAdd._newData[0])
         for add in addition:
-            print(add.__name__, "\t", add.__dict__['Value 1'], "\t", add.__dict__['Value 2'], "\t", add.__dict__['Result'])
+            #print(add.__name__, "\t", add.__dict__['Value 1'], "\t", add.__dict__['Value 2'], "\t", add.__dict__['Result'])
             #print(sub.__dict__['Value 1'], "\t", sub.__dict__['Value 2'], "\t", sub.__dict__['Result'])
-            #self.assertEqual(add.__name__, test_class_addition.__name__)
+            self.assertEqual(add.__name__, test_class_addition.__name__)
 
 
 if __name__ == '__main__':
