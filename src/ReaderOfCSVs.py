@@ -34,12 +34,14 @@ class ReaderOfCSVs:
     Each row in the csvRow is then added to a list
     '''
     def __init__(self, filepapa):
-        with open(filepapa) as textToRead:
+        self._newData = []
+        self._filepapa = filepapa
+        with open(self._filepapa) as textToRead:
             csvrow = csv.DictReader(textToRead, delimiter=",")
             for row in csvrow:
-                self.data.append(row)
+                self._newData.append(row)
+        textToRead.close()
 
     def create_class_dynamically(self, classname):
-        return return_data_as_objs(classname, self.data)
-
+        return return_data_as_objs(classname, self._newData)
 

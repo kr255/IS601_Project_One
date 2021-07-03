@@ -19,9 +19,11 @@ logger.addHandler(stream_handler)
 class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
-        path = r'src/UnitTestAddition.csv'
+        self.pathAddition = r'src/UnitTestAddition.csv'
+        self.pathSubtraction = r'src/UnitTestSubtraction.csv'
+        self.pathDivision = r'src/UnitTestDivision.csv'
+        self.pathMultiplication = r'src/UnitTestMultiplication.csv'
         stream_handler.stream = sys.stdout
-        self.csvReader = ReaderOfCSVs(path)
 
     '''
     addition = self.csvReader.create_class_dynamically("addition")
@@ -30,13 +32,14 @@ class MyTestCase(unittest.TestCase):
 
     '''
     def test_return_data_as_objs(self):
-        addition = self.csvReader.create_class_dynamically("addition")
+        self.csvReaderAdd = ReaderOfCSVs(self.pathAddition)
+        addition = self.csvReaderAdd.create_class_dynamically("addition")
         self.assertIsInstance(addition, list)
-        print(addition[0])
-        test_class = classfactory('addition', self.csvReader.data[0])
+        test_class_addition = classfactory('addition', self.csvReaderAdd._newData[0])
         for add in addition:
-            #print(add.__bases__)
-            self.assertEqual(add.__name__, test_class.__name__)
+            print(add.__name__, "\t", add.__dict__['Value 1'], "\t", add.__dict__['Value 2'], "\t", add.__dict__['Result'])
+            #print(sub.__dict__['Value 1'], "\t", sub.__dict__['Value 2'], "\t", sub.__dict__['Result'])
+            #self.assertEqual(add.__name__, test_class_addition.__name__)
 
 
 if __name__ == '__main__':
