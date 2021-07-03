@@ -29,6 +29,8 @@ camelcase is out of habit, please ignore it.
 '''
 
 class MyTestCase(unittest.TestCase):
+
+    calcu = Calculator()
     def setUp(self):
         stream_handler.stream = sys.stdout
         self.calc = Calculator()
@@ -38,15 +40,18 @@ class MyTestCase(unittest.TestCase):
 
     def test_instantiate_calculator(self):
         # calc = Calculator()
-        self.assertIsInstance(self.calc, Calculator)
+        self.assertIsInstance(self.calcu, Calculator)
+        print(self.calcu.count)
 
     def test_addition(self):
         #calc = Calculator()
-        self.assertEqual(self.calc.add(2,2), 4)
+        self.assertEqual(self.calcu.add(2,2), 4)
+        print(self.calcu.count)
 
     def test_subtraction(self):
         #calc = Calculator()
         self.assertEqual(self.calc.sub(2,2), 0)
+        print(self.calcu.count)
 
     def test_multiplication(self):
         #calc = Calculator()
