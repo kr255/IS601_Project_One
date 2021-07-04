@@ -26,7 +26,7 @@ class ReaderOfCSVs:
     data = [] #this var ruined it all for me
     '''
     Constructor
-    @:param filepath, empty list
+    @:param filepath
     open a file path specified for reading a csv
     DictReader from csv reads and reads it as a dictionary per line
     for example: {Value1: 580, Value2: 459, Result: 1039}
