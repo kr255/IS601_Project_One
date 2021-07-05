@@ -31,3 +31,8 @@
    - square root
 
 #### You need to correctly use static methods, object methods, object attributes/properties. You need to use the included files to load data for your unit tests. Use each file to test the associated operation.
+
+![Logs](https://user-images.githubusercontent.com/17055891/124515364-46182400-ddad-11eb-9ae3-954878167189.png)
+![unit test results](https://user-images.githubusercontent.com/17055891/124515386-53cda980-ddad-11eb-966c-e4fbeb917625.png)
+
+
