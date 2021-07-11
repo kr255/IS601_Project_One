@@ -1,16 +1,15 @@
-from itertools import count
+from Addition import addition
+from Division import divide
+from Multiplication import multiply
+from Square import square
+from SquareRoot import squareRoot
+from Subtraction import subtract
 
-from BasicArithmitic import *
+
 class Calculator:
 
-    '''static var count
-        used for counting the number of objects created in test?
-        not sure why
-    '''
-    count = 0
     def __init__(self):
         self._result = 0
-        self.count = self.count + 1
         pass
 
     def add(self, a, b):

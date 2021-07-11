@@ -2,8 +2,8 @@ import unittest
 import logging
 import sys
 from Calculator import Calculator
-from BasicArithmitic import *
-from ReaderOfCSVs import ReaderOfCSVs
+from CsvReader.ReaderOfCSVs import ReaderOfCSVs
+from SquareRoot import squareRoot
 
 '''
 setting up logger for checking out of obj
@@ -22,10 +22,10 @@ logger = logging.getLogger()
 logger.level = logging.DEBUG
 stream_handler = logging.StreamHandler(sys.stdout)
 logger.addHandler(stream_handler)
-pathAddition = r'src/UnitTestAddition.csv'
-pathSubtraction = r'src/UnitTestSubtraction.csv'
-pathDivision = r'src/UnitTestDivision.csv'
-pathMultiplication = r'src/UnitTestMultiplication.csv'
+pathAddition = r'Calculator/UnitTestAddition.csv'
+pathSubtraction = r'Calculator/UnitTestSubtraction.csv'
+pathDivision = r'Calculator/UnitTestDivision.csv'
+pathMultiplication = r'Calculator/UnitTestMultiplication.csv'
 '''
 Test class for Calculator.py
 '''

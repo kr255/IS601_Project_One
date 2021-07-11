@@ -1,6 +1,6 @@
 FROM python:latest
 
-ADD src /src
+ADD Calculator /src
 
-#CMD [ "python", "./src/CSVTest.py" ]
+#CMD [ "python", "./Calculator/CSVTest.py" ]
 CMD [ "python", "./src/CalculatorTest.py" ]

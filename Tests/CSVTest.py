@@ -1,5 +1,5 @@
 import unittest
-from ReaderOfCSVs import ReaderOfCSVs, classfactory
+from CsvReader.ReaderOfCSVs import ReaderOfCSVs, classfactory
 import logging
 import sys
 
@@ -19,10 +19,10 @@ logger.addHandler(stream_handler)
 class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.pathAddition = r'src/UnitTestAddition.csv'
-        self.pathSubtraction = r'src/UnitTestSubtraction.csv'
-        self.pathDivision = r'src/UnitTestDivision.csv'
-        self.pathMultiplication = r'src/UnitTestMultiplication.csv'
+        self.pathAddition = r'Calculator/UnitTestAddition.csv'
+        self.pathSubtraction = r'Calculator/UnitTestSubtraction.csv'
+        self.pathDivision = r'Calculator/UnitTestDivision.csv'
+        self.pathMultiplication = r'Calculator/UnitTestMultiplication.csv'
         stream_handler.stream = sys.stdout
 
     '''
