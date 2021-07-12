@@ -14,8 +14,11 @@ helper method return_data_as_objs
 
 def return_data_as_objs(classname, dictData):
     listofobjs = []
-    for row in dictData:
-        listofobjs.append(classfactory(classname, row))
+    if len(dictData) == 0:
+        raise IndexError
+    else:
+        for row in dictData:
+            listofobjs.append(classfactory(classname, row))
     return listofobjs
 
 '''

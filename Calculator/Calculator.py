@@ -17,10 +17,16 @@ class Calculator:
     def sub(self, a, b):
         return subtract(a, b)
     def div(self, a, b):
-        return divide(a, b)
+        if(b == 0.0):
+            raise ZeroDivisionError("cant divide by zero")
+        else:
+            return divide(a, b)
     def mul(self, a, b):
         return multiply(a, b)
     def square(self, a):
         return square(a)
     def squRoot(self, a):
-        return squareRoot(a)
+        if(a < 0.0):
+            raise ValueError("A negative number is entered")
+        else:
+            return squareRoot(a)
