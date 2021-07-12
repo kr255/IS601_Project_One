@@ -1,9 +1,9 @@
-from Addition import addition
-from Division import divide
-from Multiplication import multiply
-from Square import square
-from SquareRoot import squareRoot
-from Subtraction import subtract
+from Operations.Addition import addition
+from Operations.Division import divide
+from Operations.Multiplication import multiply
+from Operations.Square import square
+from Operations.SquareRoot import squareRoot
+from Operations.Subtraction import subtract
 
 
 class Calculator:

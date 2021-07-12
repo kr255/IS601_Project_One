@@ -1,7 +1,8 @@
-import unittest
-from CsvReader.ReaderOfCSVs import ReaderOfCSVs, classfactory
 import logging
 import sys
+import unittest
+
+from CsvReader.ReaderOfCSVs import ReaderOfCSVs, classfactory
 
 '''
 get the logger

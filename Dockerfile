@@ -1,6 +1,7 @@
 FROM python:latest
+ADD . /src
 
-ADD Calculator /src
 
-#CMD [ "python", "./Calculator/CSVTest.py" ]
-CMD [ "python", "./src/CalculatorTest.py" ]
+ENV PYTHONPATH "${PYTHONPATH}:/src/Calculator:/src/CsvReader:/src/Tests:/src/Operations:/src/Statistics:/src"
+#CMD [ "python", "./Calculator/test_CSVTest.py" ]
+CMD [ "python", "/src/Tests/test_CalculatorTest.py" ]

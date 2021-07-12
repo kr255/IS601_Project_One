@@ -1,9 +1,14 @@
-import unittest
 import logging
+import pathlib
 import sys
+import unittest
+print(sys.path)
 from Calculator import Calculator
-from CsvReader.ReaderOfCSVs import ReaderOfCSVs
-from SquareRoot import squareRoot
+from CsvReader import ReaderOfCSVs
+
+
+
+#from SquareRoot import squareRoot
 
 '''
 setting up logger for checking out of obj
@@ -22,10 +27,10 @@ logger = logging.getLogger()
 logger.level = logging.DEBUG
 stream_handler = logging.StreamHandler(sys.stdout)
 logger.addHandler(stream_handler)
-pathAddition = r'Calculator/UnitTestAddition.csv'
-pathSubtraction = r'Calculator/UnitTestSubtraction.csv'
-pathDivision = r'Calculator/UnitTestDivision.csv'
-pathMultiplication = r'Calculator/UnitTestMultiplication.csv'
+pathAddition = r'/src/Tests/Data/UnitTestAddition.csv'
+pathSubtraction = r'/src/Tests/Data/UnitTestSubtraction.csv'
+pathDivision = r'/src/Tests/Data/UnitTestDivision.csv'
+pathMultiplication = r'/src/Tests/Data/UnitTestMultiplication.csv'
 '''
 Test class for Calculator.py
 '''
@@ -71,7 +76,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_addition(self):
         print("\nin Addition!\n")
-        self.csvReaderAdd = ReaderOfCSVs(pathAddition)
+        self.csvReaderAdd = ReaderOfCSVs.ReaderOfCSVs(pathAddition)
         addition = self.csvReaderAdd.create_class_dynamically("addition")
         for add in addition:
             #print(add.__name__, "\t", add.__dict__['Value 1'], "\t", add.__dict__['Value 2'], "\t", add.__dict__['Result'])
@@ -79,7 +84,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_subtraction(self):
         print("\nin sub\n")
-        self.csvReaderAdd = ReaderOfCSVs(pathSubtraction)
+        self.csvReaderAdd = ReaderOfCSVs.ReaderOfCSVs(pathSubtraction)
         subsub = self.csvReaderAdd.create_class_dynamically("sub")
         for sub in subsub:
             #print(sub.__name__, "\t", sub.__dict__['Value 1'], "\t", sub.__dict__['Value 2'], "\t", sub.__dict__['Result'])
@@ -87,7 +92,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_divide(self):
         print("\nin divdidididididid\n")
-        self.csvReaderDiv = ReaderOfCSVs(pathDivision)
+        self.csvReaderDiv = ReaderOfCSVs.ReaderOfCSVs(pathDivision)
         divdiv = self.csvReaderDiv.create_class_dynamically("divdiv")
         for div in divdiv:
             #print(div.__name__, "\t", div.__dict__['Value 1'], "\t", div.__dict__['Value 2'], "\t", div.__dict__['Result'])
@@ -95,14 +100,11 @@ class MyTestCase(unittest.TestCase):
 
     def test_multiply(self):
         print("\nmulti-multi\n")
-        self.csvReaderMulti = ReaderOfCSVs(pathMultiplication)
+        self.csvReaderMulti = ReaderOfCSVs.ReaderOfCSVs(pathMultiplication)
         multiMulti = self.csvReaderMulti.create_class_dynamically("multimulti")
         for multi in multiMulti:
             self.assertEqual(self.calc.mul(int(multi.__dict__['Value 1']), int(multi.__dict__['Value 2'])), int(multi.__dict__['Result']))
 
-    def test_squareRootFromBasicArithmitic(self):
-        self.assertEqual(squareRoot(16), 4)
-        self.assertEqual(squareRoot(4), 2)
 
 
 if __name__ == '__main__':

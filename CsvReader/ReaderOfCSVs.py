@@ -1,5 +1,5 @@
 import csv
-
+from FileUtilities import absolutepath
 '''
 constructs a class at runtime like (class_name, (objects,), dictionary) 
 '''
@@ -36,7 +36,7 @@ class ReaderOfCSVs:
     def __init__(self, filepapa):
         self._newData = []
         self._filepapa = filepapa
-        with open(self._filepapa) as textToRead:
+        with open(absolutepath.absolutepath(filepapa)) as textToRead:
             csvrow = csv.DictReader(textToRead, delimiter=",")
             for row in csvrow:
                 self._newData.append(row)
