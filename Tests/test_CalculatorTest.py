@@ -2,18 +2,14 @@ import logging
 import pathlib
 import sys
 import unittest
-print(sys.path)
 from Calculator import Calculator
+#print(sys.path)
 from CsvReader import ReaderOfCSVs
-
-
-
-#from SquareRoot import squareRoot
 
 '''
 setting up logger for checking out of obj
 redirecting it to standard out??
-    
+
 result:::: well should of read the documentation
 setUp() is called per test method call so 1 obj is created per test.
 

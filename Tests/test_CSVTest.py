@@ -16,14 +16,18 @@ logger.level = logging.DEBUG
 stream_handler = logging.StreamHandler(sys.stdout)
 logger.addHandler(stream_handler)
 
+pathAddition = r'/src/Tests/Data/UnitTestAddition.csv'
+pathSubtraction = r'/src/Tests/Data/UnitTestSubtraction.csv'
+pathDivision = r'/src/Tests/Data/UnitTestDivision.csv'
+pathMultiplication = r'/src/Tests/Data/UnitTestMultiplication.csv'
 
 class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.pathAddition = r'Calculator/UnitTestAddition.csv'
-        self.pathSubtraction = r'Calculator/UnitTestSubtraction.csv'
-        self.pathDivision = r'Calculator/UnitTestDivision.csv'
-        self.pathMultiplication = r'Calculator/UnitTestMultiplication.csv'
+        # self.pathAddition = r'Calculator/UnitTestAddition.csv'
+        # self.pathSubtraction = r'Calculator/UnitTestSubtraction.csv'
+        # self.pathDivision = r'Calculator/UnitTestDivision.csv'
+        # self.pathMultiplication = r'Calculator/UnitTestMultiplication.csv'
         stream_handler.stream = sys.stdout
 
     '''
@@ -33,7 +37,7 @@ class MyTestCase(unittest.TestCase):
 
     '''
     def test_return_data_as_objs(self):
-        self.csvReaderAdd = ReaderOfCSVs(self.pathAddition)
+        self.csvReaderAdd = ReaderOfCSVs(pathAddition)
         addition = self.csvReaderAdd.create_class_dynamically("addition")
         self.assertIsInstance(addition, list)
         test_class_addition = classfactory('addition', self.csvReaderAdd._newData[0])
