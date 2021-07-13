@@ -1,7 +1,7 @@
 import Addition
 '''
 
-wtf was i thinking, turning binary seach into a mean algorithm on the day its due
+wtf was i thinking, turning binary search into a mean algorithm on the day its due
 
 '''
 def meanCalulation(listofnum, lows, highs):
@@ -12,6 +12,8 @@ def meanCalulation(listofnum, lows, highs):
     mid = (low + high) // 2
     #print("2 ", low, mid, high)
     #print("length of list", len(listofnum))
+    if(len(listofnum[lows:highs]) == 0):
+        return 0
     if(len(listofnum) < 2):
         return listofnum[0]
     if (len(listofnum) == 2):
@@ -21,6 +23,7 @@ def meanCalulation(listofnum, lows, highs):
         #print(listofnum, " ", len(listofnum), "end ")
         ans= ((meanCalulation(listofnum[low:mid], low, mid) +\
                meanCalulation(listofnum[mid:high], low, mid)))
+    print(ans)
     return(ans)
 
 def mean(listofnumbers):

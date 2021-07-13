@@ -46,7 +46,7 @@ class MyTestCase(unittest.TestCase):
         sys.setrecursionlimit(1000000)  # max depth of recursion
         #threading.stack_size(2 ** 27)  # new thread will get stack of such size
         self.statCal = StatisticsCalculator()
-        self.listofnum = [3,2,1,0,7,6,8,2]
+        self.listofnum = [2,1,10,7,6,8,2]
         #self.emptyList = [1]
 
     # def test_something(self):
