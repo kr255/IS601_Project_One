@@ -1,5 +1,5 @@
 from Calculator import Calculator
-from Operations import Mean
+from Operations import Mean, Median, Mode, Variance, StandardDeviation
 
 class StatisticsCalculator(Calculator):
 
@@ -11,5 +11,11 @@ class StatisticsCalculator(Calculator):
     def mean(self, listofnumbers):
         return Mean.mean(listofnumbers)
         # print(self._result)
-
-
+    def median(self, listofnumbers):
+        return Median.median(listofnumbers)
+    def mode(self, listofnumbers):
+        return Mode.mode(listofnumbers)
+    def variance(self, listofnumbers):
+        return Variance.variance(listofnumbers)
+    def standarddeviation(self, listofnumbers):
+        return StandardDeviation.StandDev(listofnumbers)
