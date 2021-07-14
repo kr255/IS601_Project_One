@@ -13,6 +13,6 @@ setup(
         where = 'pythonProject',
         include = ['*',],
     ),
-    package_dir = {"":"src"}
+    package_dir = {"":"pythonProject"}
 
 )

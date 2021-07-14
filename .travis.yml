@@ -5,8 +5,8 @@ python:
 install:
   - pip install -r requirements.txt
 # command to run tests
-#env:
-#  - PYTHONPATH="${PYTHONPATH}:/pythonProject/*"
+env:
+  - PYTHONPATH="${PYTHONPATH}:Calculator:Operations:FileUtilities:Statistics:CsvReader"
 script:
   - python -m  unittest discover -s  Tests
 
