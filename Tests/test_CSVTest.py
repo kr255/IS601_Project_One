@@ -16,10 +16,10 @@ logger.level = logging.DEBUG
 stream_handler = logging.StreamHandler(sys.stdout)
 logger.addHandler(stream_handler)
 
-pathAddition = '/Tests/Data/UnitTestAddition.csv'
-pathSubtraction = '/Tests/Data/UnitTestSubtraction.csv'
-pathDivision = '/Tests/Data/UnitTestDivision.csv'
-pathMultiplication = 'UnitTestMultiplication.csv'
+pathAddition = 'Tests/Data/UnitTestAddition.csv'
+pathSubtraction = 'Tests/Data/UnitTestSubtraction.csv'
+pathDivision = 'Tests/Data/UnitTestDivision.csv'
+pathMultiplication = 'Tests/Data/UnitTestMultiplication.csv'
 
 class MyTestCase(unittest.TestCase):
 
