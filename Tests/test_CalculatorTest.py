@@ -36,7 +36,7 @@ class MyTestCase(unittest.TestCase):
     #calcu = Calculator()
     def setUp(self):
         stream_handler.stream = sys.stdout
-        self.calc = Calculator()
+        self.calc = Calculator.Calculator()
 
     # def test_something(self):
     #     self.assertEqual(True, True)
