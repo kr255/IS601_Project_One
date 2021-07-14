@@ -3,7 +3,7 @@ import pathlib
 import sys
 import unittest
 
-from Statistics.StatisticsCalculator import StatisticsCalculator
+from Statistics import StatisticsCalculator
 
 print(sys.path)
 from Calculator import Calculator
@@ -42,7 +42,7 @@ class MyTestCase(unittest.TestCase):
         #sys.setrecursionlimit(10 ** 7)  # max depth of recursion
         sys.setrecursionlimit(1000000)  # max depth of recursion
         #threading.stack_size(2 ** 27)  # new thread will get stack of such size
-        self.statCal = StatisticsCalculator()
+        self.statCal = StatisticsCalculator.StatisticsCalculator()
         self.listofnum = [2,1,7,6,8,2,8,8]
         #self.emptyList = [1]
 
@@ -64,7 +64,7 @@ class MyTestCase(unittest.TestCase):
         self.assertAlmostEqual(self.statCal.mean(self.listofnum), 5.25)
 
     def test_instantiate_stats_calculator(self):
-        self.assertIsInstance(self.statCal, StatisticsCalculator)
+        self.assertIsInstance(self.statCal, StatisticsCalculator.StatisticsCalculator)
 
 if __name__ == '__main__':
     unittest.main()

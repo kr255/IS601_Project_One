@@ -68,7 +68,7 @@ class MyTestCase(unittest.TestCase):
     #     #calc = Calculator()
     #     self.assertEqual(self.calc.square(2), 4)
     def test_instantiate_calculator(self):
-        self.assertIsInstance(self.calc, Calculator)
+        self.assertIsInstance(self.calc, Calculator.Calculator)
 
     def test_addition(self):
         print("\nin Addition!\n")
