@@ -42,7 +42,7 @@ class MyTestCase(unittest.TestCase):
         #sys.setrecursionlimit(10 ** 7)  # max depth of recursion
         sys.setrecursionlimit(1000000)  # max depth of recursion
         #threading.stack_size(2 ** 27)  # new thread will get stack of such size
-        self.statCal = StatisticsCalculator.StatisticsCalculator()
+        self.statCal = StatisticsCalculator.StatisticsCalculator(Calculator)
         self.listofnum = [2,1,7,6,8,2,8,8]
         #self.emptyList = [1]
 
