@@ -10,7 +10,7 @@ setup(
     url="",
     packages=find_packages(
 
-        where = 'src',
+        where = 'pythonProject',
         include = ['*',],
     ),
     package_dir = {"":"src"}

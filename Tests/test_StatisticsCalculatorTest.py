@@ -26,10 +26,11 @@ logger = logging.getLogger()
 logger.level = logging.DEBUG
 stream_handler = logging.StreamHandler(sys.stdout)
 logger.addHandler(stream_handler)
-pathAddition = r'/src/Tests/Data/UnitTestAddition.csv'
-pathSubtraction = r'/src/Tests/Data/UnitTestSubtraction.csv'
-pathDivision = r'/src/Tests/Data/UnitTestDivision.csv'
-pathMultiplication = r'/src/Tests/Data/UnitTestMultiplication.csv'
+
+pathAddition = 'Tests/Data/UnitTestAddition.csv'
+pathSubtraction = 'Tests/Data/UnitTestSubtraction.csv'
+pathDivision = 'Tests/Data/UnitTestDivision.csv'
+pathMultiplication = 'Tests/Data/UnitTestMultiplication.csv'
 '''
 Test class for Calculator.py
 '''
