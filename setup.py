@@ -10,9 +10,9 @@ setup(
     url="",
     packages=find_packages(
 
-        where = 'pythonProject',
-        include = ['*',],
+        # where = 'pythonProject',
+        # include = ['*',],
     ),
-    package_dir = {"":"pythonProject"}
+    #package_dir = {"":"pythonProject"}
 
 )
