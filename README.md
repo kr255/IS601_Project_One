@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/kr255/IS601_Project_One.svg?branch=master)](https://travis-ci.com/kr255/IS601_Project_One)
+
 # Calculator Application in Python
 ------
 
