@@ -1,4 +1,5 @@
-from Calculator.Calculator import Calculator
+# from Calculator.Calculator import Calculator
+from Calculator import Calculator
 from Operations import Mean, Median, Mode, Variance, StandardDeviation
 
 class StatisticsCalculator(Calculator):

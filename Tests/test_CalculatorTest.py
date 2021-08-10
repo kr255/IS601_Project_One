@@ -36,7 +36,8 @@ class MyTestCase(unittest.TestCase):
     #calcu = Calculator()
     def setUp(self):
         stream_handler.stream = sys.stdout
-        self.calc = Calculator.Calculator()
+        #self.calc = Calculator.Calculator()
+        self.calc = Calculator()
 
     # def test_something(self):
     #     self.assertEqual(True, True)
@@ -68,7 +69,8 @@ class MyTestCase(unittest.TestCase):
     #     #calc = Calculator()
     #     self.assertEqual(self.calc.square(2), 4)
     def test_instantiate_calculator(self):
-        self.assertIsInstance(self.calc, Calculator.Calculator)
+        #self.assertIsInstance(self.calc, Calculator.Calculator)
+        self.assertIsInstance(self.calc, Calculator)
 
     def test_addition(self):
         print("\nin Addition!\n")
